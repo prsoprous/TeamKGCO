@@ -92,9 +92,9 @@ button {
 					<tr style="height: 60px;">
 						<!-- 승인이되면 png -->
 						
-						<td><c:if test="${param.confirm1 != null}">승인</c:if></td>
-						<td><c:if test="${param.confirm2 != null}">승인</c:if></td>
-						<td><c:if test="${param.confirm3 != null}">승인</c:if></td>
+						<td><c:if test="${documentVO.confirm1 != null}"><img src="/resources/images/confirm/comfirm.png"/></c:if></td>
+						<td><c:if test="${documentVO.confirm2 != null}"><img src="/resources/images/confirm/comfirm.png"/></c:if></td>
+						<td><c:if test="${documentVO.confirm3 != null}"><img src="/resources/images/confirm/comfirm.png"/></c:if></td>
 					</tr>
 					<tr>
 						<!-- 승인자 -->

@@ -374,7 +374,7 @@ public class EmployeeController {
 			}
 		}
 
-		boolean dateCheck = false; // 금일 날짜 존재여부 체크
+		int dateCheck = 0; // 금일 날짜 존재여부 체크
 		JSONObject objUpdate = new JSONObject();
 		List<EmployeeWorkNoteVO> empWorkNote = service.getWorkNote();
 		for (EmployeeWorkNoteVO vo : empWorkNote) {
@@ -382,13 +382,11 @@ public class EmployeeController {
 		}
 		for (EmployeeWorkNoteVO vo : empWorkNote) {
 			if (date.equals(vo.getDate())) { // 오늘날짜가 table에 존재한다면
-				dateCheck = true;
-			} else {// 오늘날짜가 table에 존재없다면
-				dateCheck = false;
-			} // if~else
+				dateCheck++;
+			} 
 		} // for
 
-		if (dateCheck) { // 오늘날짜 레코드 존재 update
+		if (dateCheck ==1) { // 오늘날짜 레코드 존재 update
 			JSONArray array = new JSONArray();
 			// String -> List<Map<String,Object>>
 			JSONParser parser = new JSONParser();
@@ -406,7 +404,7 @@ public class EmployeeController {
 			JSONObject objTemp = new JSONObject();
 			objTemp = AttendDao.getJsonStringFromMap(map);
 			service.updateByWorkNote(date, "["+objTemp.toJSONString()+"]");
-		} else if (!dateCheck) { // 오늘날짜 레코드 존재 X insert
+		} else if (dateCheck != 1) { // 오늘날짜 레코드 존재 X insert
 			JSONArray array = new JSONArray();
 			JSONObject obj = new JSONObject();
 			obj.put(eid, estate);

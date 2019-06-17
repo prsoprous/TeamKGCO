@@ -208,15 +208,19 @@ public class MemberController {
 		Object object = new Object();
 		// 이번달
 		if (curYearNum == year && curMonthNum == month) {
-			for (int i = 1; i <= curDateNum; i++) {
+			for (int i = 1; i <= monthList.size(); i++) {
 				try {
 					if(obj.get(monthList.get(i - 1))!=null) {
 						object = parser.parse(obj.get(monthList.get(i - 1)).toString());
 						array = (JSONArray) object;
 						List<Map<String, Object>> listMap = AttendDao.getListMapFromJsonArray(array);
 						map = listMap.get(0); // 하루치 근무일지
+						if(map.get(principal.getName()) == null){
+						    monthStateMap= null;
+						}else {
 						monthStateMap.put(monthList.get(i - 1), (String) map.get(principal.getName()));
 						objState = AttendDao.getJsonStringFromMapss(monthStateMap);
+						}
 					}else if(obj.get(monthList.get(i - 1))==null) {
 				
 						monthStateMap= null;

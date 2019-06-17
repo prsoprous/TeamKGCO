@@ -50,7 +50,6 @@
 					<th>직급</th>
 					<th>이름</th>
 					<th>편성게이트</th>
-					<th>출근여부</th>
 					<th>업무상황</th>
 					<th>스케줄</th>
 				</tr>
@@ -62,7 +61,6 @@
 						<td>${statusVO.EClass }</td>
 						<td>${statusVO.EName }</td>
 						<td>${statusVO.EGate }</td>
-						<td>${statusVO.EAttend }</td>
 						<td>${statusVO.EState }</td>
 						<td>${statusVO.EGroup }</td>
 					</tr>

@@ -194,7 +194,7 @@
 
 
 	<!-- footer -->
-	<jsp:include page="/WEB-INF/views/inc/footer.jsp" />
+	    <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 	<!-- footer -->
 
 	<!-- loader -->

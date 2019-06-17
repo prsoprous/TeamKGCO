@@ -55,27 +55,7 @@
 
 <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
     
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sleep" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">CoHost</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="domain.html" class="nav-link">Domain</a></li>
-	          <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
-	          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Get started</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+	   <jsp:include page="/WEB-INF/views/inc/header2.jsp" />
 
     <div class="hero-wrap hero-wrap-2" style="background-image: url(&quot;images/bg_1.jpg&quot;); background-position: 50% 0px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -206,7 +186,7 @@
       </div>
     </section> <!-- .section -->
 
-    
+        <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
     
   
 

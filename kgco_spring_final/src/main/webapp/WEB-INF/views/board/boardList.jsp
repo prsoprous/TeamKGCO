@@ -93,7 +93,7 @@ p {
  <sec:authentication property="principal" var="personalinfo"/> 
 
 
-
+<jsp:include page="/WEB-INF/views/inc/header2.jsp" />
 <section class="ftco-section">
 
 	<div class="row">
@@ -302,7 +302,7 @@ p {
 		</div>
 
 </section>
-
+	 <jsp:include page="/WEB-INF/views/inc/footer.jsp" />
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script

@@ -204,7 +204,7 @@
 
 
 	<!-- footer -->
-	<jsp:include page="/WEB-INF/views/inc/footer.jsp" />
+	 <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 	<!-- footer -->
 
 
@@ -232,20 +232,21 @@
 	<script src="/resources/js/main.js"></script>
 	<script src="/resources/js/jquery-3.3.1.min.js"></script>
 	<script>
+	var j = 30;
+	var i = j;
+	function timerSet(){
+		
+		i--;
+		var str = i + '초 후에 업데이트 됩니다.';
+		$('.setCnt').empty();
+		$('.setCnt').html(str);
+		
+	}
+	setInterval(timerSet, 1 * 1000);
+	setInterval(statusUpdate, i * 1000);
 		function statusUpdate() {
 			
-			var j = 30;
-			var i = j;
-			function timerSet(){
-				
-				i--;
-				var str = i + '초 후에 업데이트 됩니다.';
-				$('.setCnt').empty();
-				$('.setCnt').html(str);
-				
-			}
-			setInterval(timerSet, 1 * 1000);
-			setInterval(statusUpdate, i * 1000);
+		
 			
 			
 			var str = "";

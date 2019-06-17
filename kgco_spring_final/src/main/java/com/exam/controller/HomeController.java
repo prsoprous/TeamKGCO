@@ -38,7 +38,7 @@ public class HomeController {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String date = sdf.format(curDate);
 		
-		boolean dateCheck = false; // 금일 날짜 존재여부 체크
+		int dateCheck = 0; // 금일 날짜 존재여부 체크
 		JSONObject objUpdate = new JSONObject();
 		List<EmployeeWorkNoteVO> empWorkNote = service.getWorkNote();
 		for (EmployeeWorkNoteVO vo : empWorkNote) {
@@ -46,13 +46,11 @@ public class HomeController {
 		}
 		for (EmployeeWorkNoteVO vo : empWorkNote) {
 			if (date.equals(vo.getDate())) { // 오늘날짜가 table에 존재한다면
-				dateCheck = true;
-			} else {// 오늘날짜가 table에 존재없다면
-				dateCheck = false;
-			} // if~else
+				dateCheck ++;
+			} 
 		} // for
 		
-		if(!dateCheck) {
+		if(dateCheck != 1) {
 		List<EmployeeVo> eidList = service.getAllEid();
 		String workNote=AttendDao.attendByDaily(eidList);
 		service.insertByWorkNote(date.toString(), workNote);

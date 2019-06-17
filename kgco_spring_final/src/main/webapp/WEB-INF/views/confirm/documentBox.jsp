@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-
+ <jsp:include page="/WEB-INF/views/inc/header2.jsp" />
 	<section class="ftco-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
@@ -211,7 +211,7 @@
 			</div>
 		</div>
 	</section>
-
+ <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 
 	<script src="/resources/js/jquery-3.3.1.min.js"></script>
 	<script>

@@ -36,7 +36,7 @@
 </head>
 <body>
 
-
+ <jsp:include page="/WEB-INF/views/inc/header2.jsp" />
 
 <div class="container">
 <div class="space-100"></div>
@@ -71,5 +71,10 @@
 
 
 </div>
+<div class="space-100"></div>
+<div class="space-100"></div>
+<div class="space-100"></div>
+<div class="space-100"></div>
+ <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 </body>
 </html>

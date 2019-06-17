@@ -67,7 +67,7 @@ tr:hover{
 </style>
 </head>
 <body>
-
+ <jsp:include page="/WEB-INF/views/inc/header2.jsp" />
 	<section class="ftco-section bg-light">
 		<div id="gridHead">
 			<div id="gridLeft">
@@ -345,7 +345,7 @@ tr:hover{
 			</div>
 		</div>
 	</section>
-
+ <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 	<br>
 	<br>
 	<br>

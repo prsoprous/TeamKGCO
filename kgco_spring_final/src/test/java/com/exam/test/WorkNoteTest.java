@@ -48,7 +48,7 @@ public class WorkNoteTest {
 //		String date = sdf.format(curDate);
 		List<EmployeeVo> eidList = service.getAllEid();
 	
-		String date = "2019-06-15";
+		String date = "2019-06-16";
 		// 난수 생성
 		Set<Integer> set = new HashSet<>();
 

@@ -229,14 +229,16 @@ width:100px;
 
             </div>
          </div>
-
-      </div>
-
          <div>
          <div id="pie_chart_div"
                style="width: 500px; height: 400px; padding: 0px; margin: 0px; margin-left: 140px;"></div>
          
          </div>
+      </div>
+
+
+         </section>
+          <jsp:include page="/WEB-INF/views/inc/footer.jsp" />  
 
 <script src="/resources/js/jquery-3.3.1.min.js"></script>
 <script>
@@ -249,15 +251,6 @@ function showDocument(){
 </script>
 
 
-   </section>
-   <!-- loader -->
-   <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-         <circle class="path-bg" cx="24" cy="24" r="22" fill="none"
-            stroke-width="4" stroke="#eeeeee" />
-         <circle class="path" cx="24" cy="24" r="22" fill="none"
-            stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
-   </div>
 
 
    <script src="/resources/js/jquery.min.js"></script>

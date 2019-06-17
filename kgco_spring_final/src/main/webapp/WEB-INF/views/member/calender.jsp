@@ -98,6 +98,10 @@ td {
 				// 휴가 : 파랑색  
 				str = "<div style=' height:55px;  width:55px; background-color: #0000ff; display: table-cell; vertical-align: middle;'>"
 						+ i + "</div>";
+			}else if (resultObj[keydate] == 'early') {
+				// 휴가 : 파랑색  
+				str = "<div style=' height:55px;  width:55px; background-color: #6610f2; display: table-cell; vertical-align: middle;'>"
+						+ i + "</div>";
 			}else if(resultObj[keydate] == null){
 				str = i;
 			}else{

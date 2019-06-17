@@ -15,7 +15,7 @@ function attend(){
 			xhr.setRequestHeader('${_csrf.headerName}', '${_csrf.token}');
 		},
 		success : function(result) { //ÇÒÀÏ
-			window.location.reload();
+			location.href="/member/memberhome";
 		}
 	});
 	
@@ -40,7 +40,7 @@ function logout(){
 		class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
 		id="ftco-navbar">
 		<div class="container">
-			<img src="/resources/images/icons/logo.png"	href="/member/memberhome" alt="User Icon"  style="width: 250px; height: 200px;"  />
+			<img src="/resources/images/icons/logo.png"	onclick="location.href='/member/memberhome'"  alt="User Icon"  style="width: 250px; height: 200px;"  />
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#ftco-nav" aria-controls="ftco-nav"
 				aria-expanded="false" aria-label="Toggle navigation">

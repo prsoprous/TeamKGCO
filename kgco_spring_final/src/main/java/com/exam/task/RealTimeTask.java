@@ -49,7 +49,7 @@ public class RealTimeTask {
 //    }
     
     //할일
-    @Scheduled(cron = "0 0 1 * * *") //초 분 시 일 월 주
+    @Scheduled(cron = "*/30 * * * * *") //초 분 시 일 월 주
  public void airplnGateAssign() {
         
         List<OpenApiRealTimeFlightDto> outList=scheduleService.realtimeSelectOrderbyEtd("O");
