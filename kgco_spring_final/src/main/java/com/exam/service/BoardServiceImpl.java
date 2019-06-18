@@ -12,6 +12,7 @@ import com.exam.domain.AttachVo;
 import com.exam.domain.BoardVo;
 import com.exam.mapper.AttachMapper;
 import com.exam.mapper.BoardMapper;
+import com.exam.mapper.ReplyMapper;
 
 import lombok.Setter;
 
@@ -23,7 +24,8 @@ public class BoardServiceImpl implements BoardService {
     private BoardMapper mapper;
     @Setter(onMethod_ = @Autowired)
     private AttachMapper attachMapper;
-    
+    @Setter(onMethod_ = @Autowired)
+    private ReplyMapper replyMapper;
     
     @Override
     public Integer getBoardId() {
@@ -129,6 +131,8 @@ public class BoardServiceImpl implements BoardService {
 	public void deleteBoardAndAttach(int boardId) {
 		mapper.deleteBoard(boardId);
 		attachMapper.deleteAttachbyBoardId(boardId);
+		replyMapper.deleteReplybyBoardId(boardId);
+
 	}
 
     @Override

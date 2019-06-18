@@ -20,9 +20,9 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	</select>
 
 	
-<!-- 	<delete id="deleteAttachbyBoardId">
-		DELETE FROM attach WHERE bId=#{bId}	
-	</delete> -->
+	<delete id="deleteReplybyBoardId">
+      DELETE FROM reply WHERE replyGroup = #{boardId}   
+   </delete>
 	
 
 </mapper>
