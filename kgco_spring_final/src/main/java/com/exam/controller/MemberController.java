@@ -121,7 +121,7 @@ public class MemberController {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else if (employee.getEid().contains(str3) && authName.equals("[ROLE_VICEHEAD]")) {
+		} else if (employee.getEid().contains(str3) && authName.equals("[ROLE_EXAGGERATION]")) {
 
 			JSONArray jArray = service.getCountEstate(str3);
 			System.out.println("====================jArray" + jArray);

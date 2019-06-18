@@ -244,9 +244,10 @@
 	}
 	setInterval(timerSet, 1 * 1000);
 	setInterval(statusUpdate, i * 1000);
-		function statusUpdate() {
+	function statusUpdate() {
+			i = 30;
 			
-		
+			
 			
 			
 			var str = "";

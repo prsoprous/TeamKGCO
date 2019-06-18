@@ -106,7 +106,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	            JSONArray rowArray = new JSONArray();
 	            String items= estateCountList.getEstate();
 	            if(items.equals("nor")) {
-	                estateName="정상출근";
+	                estateName="출근";
 	            }else if(items.equals("abse")) {
 	                estateName="결근";
 	            }else if(items.equals("va")) {
